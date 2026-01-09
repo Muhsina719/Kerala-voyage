@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kannur Attractions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora', serif;
+}
+
+body{
+    background:#f4f7f6;
+}
+
+/* NAVBAR */
+nav{
+    background:#004d40;
+    padding:15px;
+    text-align:center;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:600;
+}
+nav a:hover{
+    color:#ffd700;
+}
+
+/* HEADING */
+h1{
+    text-align:center;
+    margin:40px 0;
+    color:#004d40;
+    font-size:38px;
+}
+
+/* GRID */
+.attraction-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:30px;
+    padding:40px 60px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* TEXT */
+.card h3{
+    padding:15px;
+    color:#004d40;
+    font-size:22px;
+    text-align:center;
+}
+
+.card p{
+    padding:0 18px 20px;
+    font-size:15px;
+    color:#333;
+    text-align:center;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin:40px;
+}
+.back a{
+    text-decoration:none;
+    padding:14px 36px;
+    background:#004d40;
+    color:white;
+    border-radius:30px;
+    font-size:18px;
+}
+.back a:hover{
+    background:#00695c;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .attraction-grid{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="explore.html">Home</a>
+    <a href="destination.html">Destinations</a>
+</nav>
+
+<h1>Top Attractions in Kannur</h1>
+
+<div class="attraction-grid">
+
+    <div class="card">
+        <img src="images/kan_beach.jpg" alt="Muzhappilangad Beach">
+        <h3>Muzhappilangad Beach</h3>
+        <p>India’s longest drive-in beach with spectacular sunsets.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kan_fort.jpg" alt="St. Angelo Fort">
+        <h3>St. Angelo Fort</h3>
+        <p>Historic seaside fort built by the Portuguese.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kan_island.jpg" alt="Dharmadam Island">
+        <h3>Dharmadam Island</h3>
+        <p>A calm island surrounded by rivers and the Arabian Sea.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kan_forest.jpg" alt="Aralam Wildlife Sanctuary">
+        <h3>Aralam Wildlife Sanctuary</h3>
+        <p>Protected forest area rich in wildlife and greenery.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kan_maday.jpg" alt="Maday Fort">
+        <h3>Maday Fort</h3>
+        <p>Ancient fort offering panoramic views of Kannur.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/kan_hill.jpg" alt="Palakkayam Thattu">
+        <h3>Palakkayam Thattu</h3>
+        <p>Misty hilltop destination perfect for trekking lovers.</p>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="destination.html">⬅ Back to Districts</a>
+</div>
+
+</body>
+</html>

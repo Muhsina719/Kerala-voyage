@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ernakulam Attractions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora', serif;
+}
+
+body{
+    background:#f4f7f6;
+}
+
+/* NAVBAR */
+nav{
+    background:#004d40;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:600;
+}
+nav a:hover{
+    color:#ffd700;
+}
+
+/* HEADING */
+h1{
+    text-align:center;
+    margin:40px 0;
+    color:#004d40;
+    font-size:38px;
+}
+
+/* GRID */
+.attraction-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    padding:40px 60px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* TEXT */
+.card h3{
+    padding:15px;
+    color:#004d40;
+    font-size:22px;
+    text-align:center;
+}
+
+.card p{
+    padding:0 18px 20px;
+    font-size:15px;
+    color:#333;
+    text-align:center;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin:40px;
+}
+.back a{
+    text-decoration:none;
+    padding:14px 36px;
+    background:#004d40;
+    color:white;
+    border-radius:30px;
+    font-size:18px;
+}
+.back a:hover{
+    background:#00695c;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .attraction-grid{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="explore.html">Home</a>
+    <a href="destination.html">Destinations</a>
+</nav>
+
+<h1>Top Attractions in Ernakulam</h1>
+
+<div class="attraction-grid">
+
+    <div class="card">
+        <img src="images/marine-drive.jpg" alt="Marine Drive">
+        <h3>Marine Drive</h3>
+        <p>Beautiful waterfront promenade famous for sunsets and city views.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/fort-kochi.jpg" alt="Fort Kochi">
+        <h3>Fort Kochi</h3>
+        <p>Historic area with colonial buildings and Chinese fishing nets.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/cherai-beach.jpg" alt="Cherai Beach">
+        <h3>Cherai Beach</h3>
+        <p>Clean sandy beach ideal for swimming and dolphin spotting.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/hill-palace.jpg" alt="Hill Palace">
+        <h3>Hill Palace Museum</h3>
+        <p>Largest archaeological museum in Kerala, once a royal palace.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/mattancherry-palace.jpg" alt="Mattancherry Palace">
+        <h3>Mattancherry Palace</h3>
+        <p>Also known as Dutch Palace, famous for Kerala murals.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/jew-town.jpg" alt="Jew Town">
+        <h3>Jew Town & Synagogue</h3>
+        <p>Historic street with antique shops and ancient synagogue.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/bolgatty-island.jpg" alt="Bolgatty Island">
+        <h3>Bolgatty Island</h3>
+        <p>Scenic island with palace, gardens, and backwater views.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/folklore-museum.jpg" alt="Kerala Folklore Museum">
+        <h3>Kerala Folklore Museum</h3>
+        <p>Showcases traditional Kerala art, culture, and architecture.</p>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="destination.html">⬅ Back to Districts</a>
+</div>
+
+</body>
+</html>

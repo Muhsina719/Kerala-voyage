@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thiruvananthapuram Attractions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora', serif;
+}
+
+body{
+    background:#f4f7f6;
+}
+
+/* NAVBAR */
+nav{
+    background:#004d40;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:600;
+}
+nav a:hover{
+    color:#ffd700;
+}
+
+/* HEADING */
+h1{
+    text-align:center;
+    margin:40px 0;
+    color:#004d40;
+    font-size:38px;
+}
+
+/* GRID */
+.attraction-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    padding:40px 60px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* TEXT */
+.card h3{
+    padding:15px;
+    color:#004d40;
+    font-size:22px;
+    text-align:center;
+}
+
+.card p{
+    padding:0 18px 20px;
+    font-size:15px;
+    color:#333;
+    text-align:center;
+}
+
+/* BACK BUTTON */
+.back{
+    text-align:center;
+    margin:40px;
+}
+.back a{
+    text-decoration:none;
+    padding:14px 36px;
+    background:#004d40;
+    color:white;
+    border-radius:30px;
+    font-size:18px;
+}
+.back a:hover{
+    background:#00695c;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .attraction-grid{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="explore.html">Home</a>
+    <a href="destination.html">Destinations</a>
+</nav>
+
+<h1>Top Attractions in Thiruvananthapuram</h1>
+
+<div class="attraction-grid">
+
+    <div class="card">
+        <img src="images/tvm_temple.jpg" alt="Sree Padmanabhaswamy Temple">
+        <h3>Sree Padmanabhaswamy Temple</h3>
+        <p>One of the richest and most famous temples in the world, known for its Dravidian architecture.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/tvm_kovalam.jpg" alt="Kovalam Beach">
+        <h3>Kovalam Beach</h3>
+        <p>Popular beach destination with crescent-shaped shores and stunning sunsets.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/tvm_varkala.jpg" alt="Varkala Cliff">
+        <h3>Varkala Cliff</h3>
+        <p>Unique cliff formation overlooking the Arabian Sea, ideal for relaxation and views.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/tvm_poovar.jpg" alt="Poovar Island">
+        <h3>Poovar Island</h3>
+        <p>Serene island with golden beaches, backwaters, and lush coconut groves.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/tvm_zoo.jpg" alt="Napier Museum and Zoo">
+        <h3>Napier Museum & Zoo</h3>
+        <p>Historic museum and zoological park showcasing art, culture, and wildlife.</p>
+    </div>
+
+</div>
+
+<div class="back">
+    <a href="destination.html">⬅ Back to Districts</a>
+</div>
+
+</body>
+</html>

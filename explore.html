@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explore Kerala</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora', serif;
+}
+
+html{ scroll-behavior:smooth; }
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    background:#004d40;
+    z-index:1000;
+}
+.nav-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+}
+.nav-container a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+}
+.nav-container a:hover{ color:#ffd700; }
+
+/* HOME */
+#home{
+    position:relative;
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    transition:background-image 1.5s ease-in-out;
+}
+
+/* QUOTE */
+.quote-box{
+    position:absolute;
+    bottom:12%;
+    width:100%;
+    text-align:center;
+}
+#quoteText{
+    font-size:34px;
+    font-weight:600;
+    color:white;
+    line-height:1.4;
+    text-shadow:0 4px 18px rgba(0,0,0,0.7);
+    transition:opacity 1s ease, transform 1s ease;
+}
+
+.fade-out{
+    opacity:0;
+    transform:translateY(20px);
+}
+.fade-in{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 60px;
+    min-height:100vh;
+}
+h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#004d40;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    text-align:center;
+    transition:0.3s;
+}
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.card h3{
+    margin:18px 10px 8px;
+    font-size:20px;
+    color:#004d40;
+}
+.card p{
+    padding:0 18px 22px;
+    font-size:15px;
+    line-height:1.5;
+    color:#555;
+}
+.card:hover{
+    transform:translateY(-6px);
+    background:#004d40;
+}
+.card:hover h3,
+.card:hover p{
+    color:white;
+}
+
+/* MAP */
+.map-box{
+    width:100%;
+    height:450px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+.map-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* BACK */
+.back-home{
+    text-align:center;
+    padding:50px;
+}
+.back-home a{
+    padding:14px 36px;
+    background:#004d40;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:18px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav-container{flex-direction:column;}
+    #quoteText{font-size:22px; padding:0 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <a href="#home">Home</a>
+        <a href="destination.html">Destinations</a>
+        <a href="#foods">Special Foods</a>
+        <a href="#culture">Culture</a>
+        <a href="#festivals">Festivals</a>
+        <a href="#map">Map</a>
+        <a href="book.html">Book Your Trip</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="quote-box">
+        <div id="quoteText" class="fade-in"></div>
+    </div>
+</section>
+
+<!-- FOODS -->
+<section id="foods">
+<h2>Special Foods of Kerala</h2>
+<div class="grid">
+<div class="card"><img src="images/sadya.jpg"><h3>Sadya</h3><p>Traditional vegetarian feast served on a banana leaf.</p></div>
+<div class="card"><img src="images/biriyani.jpg"><h3>Malabar Biriyani</h3><p>Fragrant rice cooked with spices and meat.</p></div>
+<div class="card"><img src="images/appam.jpg"><h3>Appam & Stew</h3><p>Soft rice pancakes with coconut-based stew.</p></div>
+<div class="card"><img src="images/puttu.jpg"><h3>Puttu & Kadala</h3><p>Steamed rice flour with spicy black chickpea curry.</p></div>
+<div class="card"><img src="images/karimeen.jpg"><h3>Karimeen Pollichathu</h3><p>Pearl spot fish wrapped in banana leaf.</p></div>
+<div class="card"><img src="images/payasam.jpg"><h3>Payasam</h3><p>Sweet dessert made with milk or jaggery.</p></div>
+<div class="card"><img src="images/parotta.jpg"><h3>Malabar Parotta</h3><p>Layered flaky flatbread served with curry.</p></div>
+</div>
+</section>
+
+<!-- CULTURE -->
+<section id="culture">
+<h2>Kerala Culture</h2>
+<div class="grid">
+<div class="card"><img src="images/kathakali.jpg"><h3>Kathakali</h3><p>Classical dance-drama with elaborate makeup.</p></div>
+<div class="card"><img src="images/mohiniyattam.jpg"><h3>Mohiniyattam</h3><p>Graceful classical dance performed by women.</p></div>
+<div class="card"><img src="images/kalaripayattu.jpg"><h3>Kalaripayattu</h3><p>Ancient martial art of Kerala.</p></div>
+<div class="card"><img src="images/vallamkali.jpg"><h3>Vallam Kali</h3><p>Traditional snake boat races.</p></div>
+</div>
+</section>
+
+<!-- FESTIVALS -->
+<section id="festivals">
+<h2>Festivals of Kerala</h2>
+<div class="grid">
+<div class="card"><img src="images/onam.jpg"><h3>Onam</h3><p>Harvest festival celebrated with Sadya and boat races.</p></div>
+<div class="card"><img src="images/vishu.jpg"><h3>Vishu</h3><p>Kerala New Year symbolizing prosperity.</p></div>
+<div class="card"><img src="images/thrissurpooram.jpg"><h3>Thrissur Pooram</h3><p>Grand festival with elephants and fireworks.</p></div>
+<div class="card"><img src="images/attukalpongala.jpg"><h3>Attukal Pongala</h3><p>Largest women gathering for a religious ritual.</p></div>
+<div class="card"><img src="images/theyyam.jpg"><h3>Theyyam</h3><p>Ritual art form with vibrant costumes.</p></div>
+</div>
+</section>
+
+<!-- MAP -->
+<section id="map">
+<h2>Search Kerala Attractions on Map</h2>
+
+<div style="text-align:center; margin-bottom:30px;">
+<select id="placeSelect" style="padding:12px 20px;">
+<option value="">-- Select an Attraction --</option>
+<option value="Kovalam Beach">Kovalam Beach</option>
+<option value="Varkala Cliff">Varkala Cliff</option>
+<option value="Munnar">Munnar</option>
+<option value="Fort Kochi">Fort Kochi</option>
+<option value="Edakkal Caves">Edakkal Caves</option>
+</select>
+
+<button onclick="searchPlace()" style="padding:12px 25px; background:#004d40; color:white; border:none;">
+Search
+</button>
+</div>
+
+<div class="map-box">
+<iframe id="mapFrame" src="https://www.google.com/maps?q=Kerala&output=embed"></iframe>
+</div>
+</section>
+
+<div class="back-home">
+<a href="index.html">⬅ Back to Home</a>
+</div>
+
+<script>
+const slides = [
+{ img: "images/kerala1.jpg", text: "Glide through Kerala’s backwaters, where time flows gently." },
+{ img: "images/kerala2.jpg", text: "Breathe in Kerala’s hill stations, where clouds touch the sky." },
+{ img: "images/kerala3.jpg", text: "Walk along Kerala’s beaches, where waves whisper peace." },
+{ img: "images/kerala4.jpg", text: "Stand before Kerala’s waterfalls, where nature sings softly." }
+];
+
+let index = 0;
+const home = document.getElementById("home");
+const quote = document.getElementById("quoteText");
+
+function changeSlide(){
+    quote.classList.add("fade-out");
+    setTimeout(() => {
+        home.style.backgroundImage = `url(${slides[index].img})`;
+        quote.textContent = slides[index].text;
+        quote.classList.remove("fade-out");
+        quote.classList.add("fade-in");
+        index = (index + 1) % slides.length;
+    }, 800);
+}
+
+changeSlide();
+setInterval(changeSlide, 4000);
+
+function searchPlace(){
+const place = document.getElementById("placeSelect").value;
+if(place){
+document.getElementById("mapFrame").src =
+"https://www.google.com/maps?q=" + encodeURIComponent(place) + "&output=embed";
+}
+}
+</script>
+
+</body>
+</html>
+

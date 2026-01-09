@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plan Your Trip | Kerala Voyage</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ✅ jsPDF CDN (REQUIRED FOR PDF DOWNLOAD) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Lora',serif;}
+body{background:#f4f7f6}
+
+/* NAV */
+nav{background:#004d40;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;font-size:18px;margin:0 15px}
+
+/* HEADER */
+.header{background:#004d40;color:white;padding:50px;text-align:center}
+.header h1{font-size:42px}
+
+/* SECTION */
+section{padding:60px}
+.category-title{font-size:32px;color:#004d40;margin-bottom:25px}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-bottom:60px
+}
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+text-align:center
+}
+.card img{width:100%;height:200px;object-fit:cover}
+.card h3{margin:15px 0 5px;color:#004d40}
+.card p{padding:0 15px 10px;font-size:15px}
+.price{font-weight:700;margin-bottom:10px}
+.card button{
+margin-bottom:20px;
+padding:12px 30px;
+background:#004d40;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.6);
+z-index:999
+}
+.modal-content{
+background:white;
+max-width:480px;
+margin:5% auto;
+padding:30px;
+border-radius:18px
+}
+.modal-content input{
+width:100%;
+padding:10px;
+margin:8px 0
+}
+.modal-content button{
+width:100%;
+padding:12px;
+margin-top:12px;
+background:#004d40;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer
+}
+.close{float:right;font-size:22px;cursor:pointer}
+
+/* PAYMENT */
+.upi-apps img{width:50px;margin:6px}
+
+/* SUCCESS */
+.success{text-align:center;color:#004d40}
+.success h3{color:green;margin-bottom:10px}
+.receipt{text-align:left;margin-top:15px;font-size:15px}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="book.html">Plan Your Trip</a>
+</nav>
+
+<div class="header">
+<h1>Plan Your Trip</h1>
+<p>Choose experiences & adventures across Kerala</p>
+</div>
+
+<section>
+
+<h2 class="category-title">🏞 Hills & Adventure</h2>
+<div class="grid">
+<div class="card">
+<img src="https://t3.ftcdn.net/jpg/01/79/40/82/360_F_179408244_0PZxCZGC0Xbpo8gsGQZVYXIXQr9UkMfa.jpg">
+<h3>Munnar Hill Stay</h3>
+<p>Misty hills & tea gardens.</p>
+<p class="price">₹6,999</p>
+<button onclick="openBooking('Munnar Hill Stay',6999)">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://kuruvaislandresort.com/img/facilities/riverside/river-side-trukking-main.webp">
+<h3>Wayanad Trekking</h3>
+<p>Guided forest trekking.</p>
+<p class="price">₹5,499</p>
+<button onclick="openBooking('Wayanad Trekking',5499)">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://d26dp53kz39178.cloudfront.net/media/uploads/products/Camping-29_WuMjYKD.jpg">
+<h3>Hill Camping</h3>
+<p>Night camping with bonfire.</p>
+<p class="price">₹3,800</p>
+<button onclick="openBooking('Hill Camping',3800)">Book Now</button>
+</div>
+</div>
+
+<h2 class="category-title">🚣 Water Activities</h2>
+<div class="grid">
+<div class="card">
+<img src="https://www.skepcoliving.com/wp-content/uploads/2023/09/Kerala-Backwaters-jpg.webp">
+<h3>Backwater Boating</h3>
+<p>Relaxing canal ride.</p>
+<p class="price">₹2,500</p>
+<button onclick="openBooking('Backwater Boating',2500)">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://www.sreestours.com/wp-content/uploads/2021/09/MPIX2838.jpg">
+<h3>Kayaking</h3>
+<p>Adventure kayaking.</p>
+<p class="price">₹1,800</p>
+<button onclick="openBooking('Kayaking',1800)">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://d26dp53kz39178.cloudfront.net/media/uploads/products/1_SxsZkMa.jpg">
+<h3>Beach Surfing</h3>
+<p>Surfing lessons.</p>
+<p class="price">₹2,200</p>
+<button onclick="openBooking('Beach Surfing',2200)">Book Now</button>
+</div>
+</div>
+
+<h2 class="category-title">🎭 Culture & Heritage</h2>
+<div class="grid">
+<div class="card">
+<img src="https://www.keralatourism.org/responsible-tourism/uploads/large-desktop/bell_metal-making_1920_1080-20230603141833827365.webp">
+<h3>Cultural Village Tour</h3>
+<p>Village life, crafts & traditions.</p>
+<p class="price">₹1,500</p>
+<button onclick="openBooking('Cultural Village Tour',1500)">Book Now</button>
+</div>
+
+<div class="card">
+<img src="https://lumiereholidays.com/storage/pageContent/176311869869170e6a7a793.jpeg">
+<h3>Theyyam Performance</h3>
+<p>Traditional ritual art.</p>
+<p class="price">₹2,000</p>
+<button onclick="openBooking('Theyyam Performance',2000)">Book Now</button>
+</div>
+</div>
+
+</section>
+
+<!-- MODAL -->
+<div id="bookingModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeBooking()">×</span>
+
+<h3 id="pkgName"></h3>
+<p>Total Amount: ₹<span id="pkgPrice"></span></p>
+
+<div id="step1">
+<input id="custName" placeholder="Full Name">
+<input id="custEmail" placeholder="Email">
+<input id="custPhone" placeholder="Mobile Number">
+<input id="custPeople" placeholder="Number of People">
+<input id="custDate" type="date">
+<button onclick="nextStep(2)">Proceed to Payment</button>
+</div>
+
+<div id="step2" style="display:none">
+<label><input type="radio" name="pay" value="upi" checked> UPI</label><br>
+<label><input type="radio" name="pay" value="card"> Card</label>
+<button onclick="nextStep(3)">Continue</button>
+</div>
+
+<div id="step3" style="display:none">
+<div id="upiBox">
+<div class="upi-apps">
+<img src="images/pay/gpay.png">
+<img src="images/pay/phonepe.png">
+<img src="images/pay/paytm.png">
+</div>
+<input placeholder="Enter UPI ID">
+</div>
+
+<div id="cardBox" style="display:none">
+<input placeholder="Card Number">
+<input placeholder="Card Holder Name">
+<input placeholder="MM/YY">
+<input placeholder="CVV">
+</div>
+
+<button onclick="showSuccess()">Pay Now</button>
+</div>
+
+<div id="successBox" class="success" style="display:none">
+<h3>✔ Payment Successful</h3>
+<p>Thank you for choosing <b>Kerala Voyage</b></p>
+
+<div class="receipt">
+<p><b>Name:</b> <span id="rName"></span></p>
+<p><b>Email:</b> <span id="rEmail"></span></p>
+<p><b>Mobile:</b> <span id="rPhone"></span></p>
+<p><b>People:</b> <span id="rPeople"></span></p>
+<p><b>Date:</b> <span id="rDate"></span></p>
+<p><b>Package:</b> <span id="rPkg"></span></p>
+<p><b>Amount Paid:</b> ₹<span id="rAmount"></span></p>
+</div>
+
+<button onclick="downloadPDF()">Download Receipt (PDF)</button>
+</div>
+
+</div>
+</div>
+
+<script>
+function openBooking(name,price){
+bookingModal.style.display="block";
+pkgName.innerText=name;
+pkgPrice.innerText=price;
+step1.style.display="block";
+step2.style.display=step3.style.display=successBox.style.display="none";
+}
+
+function closeBooking(){ bookingModal.style.display="none"; }
+
+function nextStep(n){
+step1.style.display=step2.style.display=step3.style.display="none";
+document.getElementById("step"+n).style.display="block";
+if(n===3){
+cardBox.style.display=
+document.querySelector('input[name="pay"]:checked').value==="card"
+?"block":"none";
+}
+}
+
+function showSuccess(){
+step3.style.display="none";
+successBox.style.display="block";
+
+rName.innerText=custName.value;
+rEmail.innerText=custEmail.value;
+rPhone.innerText=custPhone.value;
+rPeople.innerText=custPeople.value;
+rDate.innerText=custDate.value;
+rPkg.innerText=pkgName.innerText;
+rAmount.innerText=pkgPrice.innerText;
+}
+
+function downloadPDF(){
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+
+doc.setFontSize(18);
+doc.text("Kerala Voyage - Payment Receipt", 20, 20);
+
+doc.setFontSize(12);
+doc.text(`Name: ${rName.innerText}`,20,40);
+doc.text(`Email: ${rEmail.innerText}`,20,48);
+doc.text(`Mobile: ${rPhone.innerText}`,20,56);
+doc.text(`People: ${rPeople.innerText}`,20,64);
+doc.text(`Travel Date: ${rDate.innerText}`,20,72);
+doc.text(`Package: ${rPkg.innerText}`,20,88);
+doc.text(`Amount Paid: ₹${rAmount.innerText}`,20,96);
+
+doc.text("Payment Status: SUCCESSFUL",20,112);
+doc.text("Thank you for choosing Kerala Voyage 🌴",20,128);
+
+doc.save("Kerala_Voyage_Receipt.pdf");
+}
+</script>
+
+</body>
+</html>

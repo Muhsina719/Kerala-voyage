@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kerala Voyage</title>
+
+<!-- Professional Font Pairing -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* Explore Button */
+.explore-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 36px;
+    background:#004d40;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:500;
+    letter-spacing:1px;
+    transition:0.3s ease;
+}
+.explore-btn:hover{
+    background:#00695c;
+    transform:scale(1.05);
+}
+
+/* HERO */
+header.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background video */
+.bg-video {
+    position: absolute;
+    inset:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation bar */
+.top-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    padding: 18px 0;
+    gap: 40px;
+    z-index: 5;
+}
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.top-nav a:hover {
+    color: #ffd700;
+}
+
+/* Hero Text */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.hero-title {
+    font-family:'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+.hero-quote {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 12%;
+    background: #ffffff;
+}
+section h2 {
+    text-align: center;
+    font-family:'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #004d40;
+}
+section h3{
+    text-align:center;
+    font-weight:400;
+    font-style:italic;
+    color:#555;
+}
+
+/* Explore text */
+.explore-description{
+    max-width:900px;
+    margin:30px auto 0;
+    text-align:center;
+    font-size:16px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* QUERY SECTION */
+.query-section{
+    background:#f4f7f6;
+}
+.subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:#555;
+}
+.query-form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.query-form input,
+.query-form textarea{
+    padding:12px 14px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+.query-form textarea{
+    resize:none;
+    height:120px;
+}
+.query-form button{
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#004d40;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+}
+.query-form button:hover{
+    background:#00695c;
+}
+
+/* REVIEWS SECTION */
+.reviews-section{
+    background:#ffffff;
+}
+.review-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+.review-card{
+    background:#f4f7f6;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+.review-card h4{
+    font-family:'Playfair Display', serif;
+    color:#004d40;
+    margin-bottom:8px;
+}
+.stars{
+    color:#f4b400;
+    margin-bottom:12px;
+}
+.review-card p{
+    font-size:15px;
+    line-height:1.6;
+    color:#444;
+}
+
+/* FOOTER */
+footer{
+    background: #003c2f;
+    color: #e8f5f1;
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+footer h2{
+    font-family:'Playfair Display', serif;
+    font-size:28px;
+    margin-bottom:8px;
+}
+footer p{
+    font-size:14px;
+    opacity:0.85;
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+<nav class="top-nav">
+    <a href="#home">Home</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<video autoplay muted loop class="bg-video">
+    <source src="" type="video/mp4">
+</video>
+
+<div class="hero-content">
+    <h1 class="hero-title">Kerala Voyage</h1>
+    <p class="hero-quote">Where every journey tells a story</p>
+    <a href="explore.html" class="explore-btn">Explore Kerala</a>
+</div>
+</header>
+
+<section id="explore">
+<h2>LET'S EXPLORE KERALA!</h2>
+<h3>"Travel explorer's home, where your story begins"</h3>
+<p class="explore-description">
+Discover Kerala through unforgettable experiences. From the tranquil backwaters and mist-covered hill stations to vibrant cities, golden beaches, and lush wildlife sanctuaries — every corner of this land has a story to tell.
+</p>
+</section>
+
+<section id="contact" class="query-section">
+<h2>Submit Your Queries</h2>
+<p class="subtitle">We’re here to help you plan your perfect Kerala journey</p>
+
+<form class="query-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="text" placeholder="Phone Number" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+</form>
+</section>
+
+<!-- 🌟 REVIEWS SECTION -->
+<section class="reviews-section">
+<h2>Traveler Reviews</h2>
+<h3>What people say about Kerala & Kerala Voyage</h3>
+
+<div class="review-grid">
+    <div class="review-card">
+        <h4>Meeshma jose</h4>
+        <div class="stars">★★★★★</div>
+        <p>
+            Kerala is truly God’s Own Country. The backwaters, greenery and culture are unmatched.
+            Kerala Voyage planned everything perfectly for us.
+        </p>
+    </div>
+
+    <div class="review-card">
+        <h4>R Alan</h4>
+        <div class="stars">★★★★★</div>
+        <p>
+            Amazing experience! The hill stay and local guidance were excellent.
+            Kerala Voyage made our trip smooth and memorable.
+        </p>
+    </div>
+
+    <div class="review-card">
+        <h4>Henin salu</h4>
+        <div class="stars">★★★★☆</div>
+        <p>
+            Loved the cultural programs and village tour.
+            Very well organized website and helpful team.
+        </p>
+    </div>
+</div>
+</section>
+
+<footer>
+<h2>Kerala Voyage</h2>
+<p>Where every journey tells a story</p>
+<p style="margin-top:20px;font-size:12px;opacity:.6">
+© 2025 Kerala Voyage. All Rights Reserved.
+</p>
+</footer>
+
+</body>
+</html>

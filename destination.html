@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kerala Districts</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Georgia', serif;
+    background:#f4f7f6;
+}
+
+/* NAVBAR */
+nav{
+    background:#004d40;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:18px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+/* HEADING */
+h1{
+    text-align:center;
+    color:#004d40;
+    margin:40px 0;
+    font-size:38px;
+}
+
+/* DISTRICT GRID (IMPORTANT FIX) */
+.district-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    padding:40px 60px;
+}
+
+/* DISTRICT CARD */
+.district-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    text-decoration:none;
+    color:#004d40;
+    box-shadow:0 12px 25px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+
+.district-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.district-card h3{
+    padding:20px;
+    font-size:22px;
+}
+
+.district-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    h1{
+        font-size:30px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="explore.html">Explore Kerala</a>
+</nav>
+
+<!-- TITLE -->
+<h1>Kerala Districts</h1>
+
+<!-- DISTRICTS -->
+<div class="district-grid">
+
+    <a href="tvm.html" class="district-card">
+        <img src="images/tvm.jpg" alt="Thiruvananthapuram">
+        <h3>Thiruvananthapuram</h3>
+    </a>
+
+    <a href="alappuzha.html" class="district-card">
+        <img src="images/alappuzha.jpg" alt="Alappuzha">
+        <h3>Alappuzha</h3>
+    </a>
+
+    <a href="ernakulam.html" class="district-card">
+        <img src="images/ernakulam.jpg" alt="Ernakulam">
+        <h3>Ernakulam</h3>
+    </a>
+
+    <a href="wayanad.html" class="district-card">
+        <img src="images/wayanad.jpg" alt="Wayanad">
+        <h3>Wayanad</h3>
+    </a>
+
+    <a href="idukki.html" class="district-card">
+        <img src="images/idukki.jpg" alt="Idukki">
+        <h3>Idukki</h3>
+    </a>
+
+    <a href="kozhikode.html" class="district-card">
+        <img src="images/kozhikode.jpg" alt="Kozhikode">
+        <h3>Kozhikode</h3>
+    </a>
+
+    <a href="kannur.html" class="district-card">
+        <img src="images/kannur.jpg" alt="Kannur">
+        <h3>Kannur</h3>
+    </a>
+
+</div>
+
+</body>
+</html>
+
+
